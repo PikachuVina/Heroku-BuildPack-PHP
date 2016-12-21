@@ -80,6 +80,7 @@ http {
         gzip_vary on;
         }
 
+		#Cac quy tac cho site Bot.Vn
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-trangchu.html$ /index.php last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-LOGIN-SUCCESS.html$ /?info=success last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-CANH-BAO.html$ /?info=400 last;
@@ -117,10 +118,10 @@ http {
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-ABOUT.html$ /about.html last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-CONTACT.html$ /contact.html last;
 
-
-        error_page 500 /500.html;
-        error_page 404 /404.html;
-        error_page 403 /403.html;
+		#Chuyen huong loi
+        #error_page 500 /500.html;
+        #error_page 404 /404.html;
+        #error_page 403 /403.html;
 		
         # default handling of .php
         location ~ \.php {
