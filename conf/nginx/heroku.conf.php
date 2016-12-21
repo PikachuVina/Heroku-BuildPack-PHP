@@ -14,7 +14,7 @@ http {
     #keepalive_timeout  0;
     keepalive_timeout  65;
 
-    gzip  on;
+    #gzip  on;
 
     server_tokens off;
 
@@ -64,7 +64,7 @@ http {
             deny all;
         }
 		
-		location / {
+		location /BOTVN {
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-trangchu.html$ /index.php break;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-LOGIN-SUCCESS.html$ /?info=success break;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-CANH-BAO.html$ /?info=400 break;
