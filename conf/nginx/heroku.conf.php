@@ -107,15 +107,6 @@ http {
         error_page 500 /500.html;
         error_page 404 /404.html;
         error_page 403 /403.html;
-        autoindex off;
-		location / {
-		if ($http_referer !~ "^$"){
-		rewrite .*.(gif|jpg|png)$ http://www.fallingupmedia.com/wp-content/uploads/2012/01/404.jpg redirect;
-		}
-		}
-		location /config.php {
-		deny all;
-		}
 		
         # default handling of .php
         location ~ \.php {
