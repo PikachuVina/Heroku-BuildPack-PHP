@@ -128,10 +128,6 @@ http {
         location ~ \.php {
             try_files @heroku-fcgi @heroku-fcgi;
         }
-				server {
-   server_name api.xn--bt-5ja.vn;
-   return 301 http://google/com;
-}
     }
 
 }
