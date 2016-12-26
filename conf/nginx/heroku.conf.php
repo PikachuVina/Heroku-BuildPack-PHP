@@ -129,5 +129,4 @@ http {
             try_files @heroku-fcgi @heroku-fcgi;
         }
     }
-
 }
