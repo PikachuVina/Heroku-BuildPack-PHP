@@ -84,6 +84,7 @@ http {
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-trangchu.html$ /index.php last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-LOGIN-SUCCESS.html$ /?info=success last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-CANH-BAO.html$ /?info=400 last;
+		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-SMS.html$ /?info=thongbao last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-LOGOUT.html$ /logout.php last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-LOGOUT-SUCCESS.html$ /?info=logout last;
 		rewrite ^/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-CAPTCHA.html$ /system/captcha-login.php last;
