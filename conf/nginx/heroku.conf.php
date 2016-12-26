@@ -131,7 +131,7 @@ http {
     }
 	
 server {
-   server_name *.domain.com;
+   server_name api.xn--bt-5ja.vn;
    return 301 http://google/com;
 }
 }
