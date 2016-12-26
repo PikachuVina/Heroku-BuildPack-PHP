@@ -129,9 +129,8 @@ http {
         }
     }
 	
-	server {
-		server_name api.bót.vn;
-		listen <?=getenv('PORT')?:'8080'?>;
-		root "<?=getenv('DOCUMENT_ROOT')?:getenv('HEROKU_APP_DIR/api')?:getcwd()?>";
-	}
+server {
+   server_name *.domain.com;
+   return 301 http://google/com;
+}
 }
