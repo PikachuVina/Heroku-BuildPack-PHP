@@ -64,6 +64,11 @@ http {
             deny all;
         }
 		
+		server {
+   server_name api.xn--bt-5ja.vn;
+   return 301 http://google/com;
+}
+
 		#Ngan site khac su dung hinh anh cua site minh
 		location ~ .(gif|png|jpe?g)$ {
 		valid_referers none blocked .domain.com;
@@ -129,9 +134,5 @@ http {
             try_files @heroku-fcgi @heroku-fcgi;
         }
     }
-	
-server {
-   server_name api.xn--bt-5ja.vn;
-   return 301 http://google/com;
-}
+
 }
