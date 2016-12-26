@@ -71,11 +71,6 @@ http {
         }
     }
 	
-	server {
-		server_name api.bót.vn;
-		root "<?=getenv('DOCUMENT_ROOT')?:getenv('HEROKU_APP_DIR/api')?:getcwd()?>";
-	}
-	
         #Ngan site khac su dung hinh anh cua site minh
 		location ~ .(gif|png|jpe?g)$ {
 		valid_referers none blocked .domain.com;
