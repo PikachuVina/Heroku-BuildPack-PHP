@@ -64,14 +64,7 @@ http {
             deny all;
         }
 		
-		
-        # default handling of .php
-        location ~ \.php {
-            try_files @heroku-fcgi @heroku-fcgi;
-        }
-    }
-	
-        #Ngan site khac su dung hinh anh cua site minh
+		#Ngan site khac su dung hinh anh cua site minh
 		location ~ .(gif|png|jpe?g)$ {
 		valid_referers none blocked .domain.com;
 		if ($invalid_referer) {
@@ -130,4 +123,14 @@ http {
         #error_page 404 /404.html;
         #error_page 403 /403.html;
 		
+        # default handling of .php
+        location ~ \.php {
+            try_files @heroku-fcgi @heroku-fcgi;
+        }
+    }
+	
+	server {
+		server_name api.bót.vn;
+		root "<?=getenv('DOCUMENT_ROOT')?:getenv('HEROKU_APP_DIR/api')?:getcwd()?>";
+	}
 }
